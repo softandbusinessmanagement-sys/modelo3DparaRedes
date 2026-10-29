@@ -1,0 +1,54 @@
+# Dependencias y archivos generados
+node_modules/
+package-lock.json
+
+# Archivos de IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Archivos de compilación
+*.min.js
+*.min.css
+dist/
+build/
+
+# Archivos de pruebas
+coverage/
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Archivos de log
+*.log
+npm-debug.log*
+
+# Archivos de cache
+.cache/
+*.cache
+
+# Archivos de edición
+*.bak
+*.backup
+
+# Archivos de Mercury (si los usa)
+.mercury/
+
+# Archivos de Git
+.git/
+.gitmodules
+
+# Archivos de despliegue
+deploy/

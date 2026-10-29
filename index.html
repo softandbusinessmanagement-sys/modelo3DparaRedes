@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Pabellón J – Modelo 3D de Redes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Interfaz de usuario -->
+    <div id="ui">
+        <div class="group">
+            <b>Vista:</b>
+            <button data-view="iso" class="on">Isométrica</button>
+            <button data-view="top">Planta (horizontal)</button>
+            <button data-view="side">Vertical (corte)</button>
+            <button data-view="front">Frontal</button>
+        </div>
+        <div class="group">
+            <b>Piso:</b>
+            <button data-floor="-1" class="on">Todos</button>
+            <button data-floor="0">1</button>
+            <button data-floor="1">2</button>
+            <button data-floor="2">3</button>
+            <button id="separate-floors">Separar pisos</button>
+        </div>
+        <div class="group">
+            <b>Capas:</b>
+            <button data-layer="walls" class="on">Muros</button>
+            <button data-layer="cabling" class="on">Cableado</button>
+            <button data-layer="furniture" class="on">Mesas</button>
+            <button data-layer="labels" class="on">Etiquetas</button>
+        </div>
+    </div>
+
+    <!-- Leyenda -->
+    <div id="legend">
+        <div><i style="background:#29a8ff"></i>Canaleta / UTP Cat 6A</div>
+        <div><i style="background:#ff5ad6"></i>Punto RJ45 (40 por salón)</div>
+        <div><i style="background:#2eea5a"></i>Cable STP a cada punto</div>
+        <div><i style="background:#ffd23f"></i>Riser vertical (canaleta ancha)</div>
+        <div><i style="background:#2ef2d0"></i>Backbone fibra</div>
+        <div><i style="background:#ff7a2f"></i>Gabinete (1 por piso, en E1)</div>
+    </div>
+
+    <!-- Canvas para Three.js -->
+    <canvas id="scene-canvas"></canvas>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/building.js"></script>
+    <script src="js/network.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
